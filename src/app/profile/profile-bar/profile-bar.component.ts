@@ -18,11 +18,7 @@ export class ProfileBarComponent implements OnInit {
     this.profileService.getUserProfile()
     .subscribe(user =>{
       this.profile = user
-    }),       
-    setInterval(() => {
-      this.myDate = new Date();
-      console.log(this.myDate);
-    }, 1000);
+    })
   }
 
 }
