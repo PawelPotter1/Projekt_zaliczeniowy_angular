@@ -9,11 +9,12 @@ import { TodosModule } from './todos/todos.module';
 import { FooterComponent } from './components/footer/footer.component';
 import { WcagComponent } from './components/wcag/wcag.component';
 import { HomeComponent } from './components/home/home.component';
+import { NavComponent } from './components/nav/nav.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent, FooterComponent, WcagComponent, HomeComponent
+    AppComponent, FooterComponent, WcagComponent, HomeComponent, NavComponent
   ],
   imports: [
     BrowserModule,

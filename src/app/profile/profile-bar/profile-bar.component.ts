@@ -11,13 +11,18 @@ export class ProfileBarComponent implements OnInit {
 
   constructor(private profileService:ProfileService) { }
 
-  profile:User
+  profile:User;
+  myDate: Date;
 
   ngOnInit() {
     this.profileService.getUserProfile()
     .subscribe(user =>{
       this.profile = user
-    })
+    }),       
+    setInterval(() => {
+      this.myDate = new Date();
+      console.log(this.myDate);
+    }, 1000);
   }
 
 }
