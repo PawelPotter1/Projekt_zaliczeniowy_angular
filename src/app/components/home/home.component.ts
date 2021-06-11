@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { WeatherdataService} from '../../services/weatherdata.service'
 
 
 @Component({
@@ -7,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
-  constructor() { }
+  data; 
+  constructor(private weatherService:WeatherdataService) { }
 
   ngOnInit(): void {
 

@@ -13,7 +13,9 @@ import { NavComponent } from './components/nav/nav.component';
 import { HttpClientModule } from '@angular/common/http';
 import { WeatherComponent } from './components/weather/weather.component';
 import { RouterModule } from '@angular/router';
-import { allAppRoutes } from './routes'
+import { allAppRoutes } from './routes';
+import { ReactiveFormsModule } from '@angular/forms';
+import { WeatherdataService} from './services/weatherdata.service'
 
 @NgModule({
   declarations: [
@@ -28,9 +30,11 @@ import { allAppRoutes } from './routes'
     ProfileModule,
     AuthModule,
     TodosModule,
-    FormsModule, HttpClientModule, RouterModule.forRoot(allAppRoutes)
+    FormsModule, 
+    ReactiveFormsModule,
+    HttpClientModule, RouterModule.forRoot(allAppRoutes)
   ],
-  providers: [],
+  providers: [WeatherdataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
