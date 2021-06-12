@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Todo } from './models/todo';
 import { TodosService } from './todos.service';
 
 @Component({
@@ -8,17 +10,18 @@ import { TodosService } from './todos.service';
   <div class="col">
     <h3>Search Todos</h3>
     <div class="input-group mb-3">
-      <input type="text" class="form-control" (keyup.enter)="search($event.target.value)" placeholder="Search ..."
-      [value]="todosService.params.getValue().query">
+      <input type="text" class="form-control" (keyup.enter)="search($event.target.value)" placeholder="Search ...">
     </div>
     <div class="list-group">
       <div class="list-group-item" *ngFor="let todo of todos | async">
         {{todo.title}}
       </div>
     </div>        
-    <div class="input-group mt-3" *ngIf="todos | async">
-      <div class="input-group-prepend">
-        <div class="input-group-text">Showing {{(todos | async)?.lenght</div>
+    <div class="input-group mt-3">
+      <div class="input-group-append" >
+        <div class="input-group-text">
+          Ilość: {{ (todos | async)?.lenght }}
+        </div>
       </div>
     </div>
   </div>
@@ -37,12 +40,12 @@ import { TodosService } from './todos.service';
 })
 export class TodosComponent implements OnInit {
 
-  todos = this.todosService.getTodos()
+  todos:Observable<Todo[]>
 
   error: boolean;
 
   search(query) {
-    this.todosService.query(query)
+    this.todos = this.todosService.queryTodo(query)
    }
 
   addTodo(title){

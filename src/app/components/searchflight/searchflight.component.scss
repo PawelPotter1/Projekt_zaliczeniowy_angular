@@ -1,0 +1,48 @@
+form {
+    width: 100%;
+    height: 200px;
+    background-color: rgb(160, 233, 252);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .data_input {
+    padding: 10px;
+    display: flex;
+  }
+  label {
+    padding: 0 7px;
+  }
+  .search__date_from,
+  .search__date_to {
+    width: 120px;
+    padding-left: 10px;
+    cursor: pointer;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+  }
+  #people {
+    border: none;
+    font-size: 14px;
+    padding: 1px;
+    outline: none;
+    height: 25px;
+    width: 30px;
+  }
+  
+  button {
+    width: 100px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding: 3px;
+    border: none;
+    box-shadow: 4px 4px 10px 0px rgba(119, 119, 119, 0.75);
+    color: rgb(255, 255, 255);
+    background-color: rgb(23, 209, 94);
+  }
+  
+  button:hover {
+    box-shadow: none;
+  }
+  

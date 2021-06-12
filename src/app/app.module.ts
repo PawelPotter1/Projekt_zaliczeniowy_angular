@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms' 
-
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProfileModule } from './profile/profile.module';
 import { AuthModule } from './auth/auth.module';
@@ -28,7 +28,8 @@ import { SelectionComponent } from './components/weather/selection/selection.com
     ProfileModule,
     AuthModule,
     TodosModule,
-    FormsModule, HttpClientModule
+    FormsModule, HttpClientModule,
+    AppRoutingModule
   ],
   providers: [WeatherdataService],
   bootstrap: [AppComponent]
