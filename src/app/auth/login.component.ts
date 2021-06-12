@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms'
-import { AuthService } from '../auth.service';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'login',
@@ -13,6 +13,7 @@ export class LoginComponent implements OnInit {
     username:[''],
     password:['']
   })
+  message: string;
 
   constructor(private fb:FormBuilder,
             private auth:AuthService) { }
@@ -22,6 +23,7 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.message = this.auth.getMessage()
   }
 
 }

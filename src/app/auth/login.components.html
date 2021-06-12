@@ -1,4 +1,5 @@
 <h3>Login</h3>
+<div class="alert alert-danger" *ngIf="message">{{message}}</div>
 <form [formGroup]="loginForm" (submit)="login()">
   <div class="form-group">
     <label for="">Username:</label>

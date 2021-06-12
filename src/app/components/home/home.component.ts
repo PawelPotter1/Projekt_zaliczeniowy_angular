@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { WeatherdataService} from '../../services/weatherdata.service'
+import { WeatherdataService } from 'src/app/services/weatherdata.service';
 
 
 @Component({
@@ -8,8 +8,10 @@ import { WeatherdataService} from '../../services/weatherdata.service'
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  data; 
-  constructor(private weatherService:WeatherdataService) { }
+
+  constructor(private weatherData: WeatherdataService) { }
+
+temperatura: number = this.weatherData.temperature;
 
   ngOnInit(): void {
 

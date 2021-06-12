@@ -1,13 +1,5 @@
 import { Component } from '@angular/core';
 
-
-export class Weather {
-  city: String
-  conditions: String
-  temperature: number
-  icon: String
-}
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -16,4 +8,5 @@ export class Weather {
 export class AppComponent {
   title = 'app';
   tab = '';
+
 }

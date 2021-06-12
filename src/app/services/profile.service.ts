@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http'
 import { User } from '../profile/models/user';
 import { filter, map } from 'rxjs/operators'
 import { Observable } from 'rxjs';
-import { AuthService } from '../auth/auth.service';
+import { AuthService } from './auth.service';
 
 @Injectable()
 export class ProfileService {

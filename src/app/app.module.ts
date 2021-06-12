@@ -7,32 +7,28 @@ import { ProfileModule } from './profile/profile.module';
 import { AuthModule } from './auth/auth.module';
 import { TodosModule } from './todos/todos.module';
 import { FooterComponent } from './components/footer/footer.component';
-import { WcagComponent } from './components/wcag/wcag.component';
+//import { WcagComponent } from './components/wcag/wcag.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavComponent } from './components/nav/nav.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http'
 import { WeatherComponent } from './components/weather/weather.component';
-import { RouterModule } from '@angular/router';
-import { allAppRoutes } from './routes';
-import { ReactiveFormsModule } from '@angular/forms';
-import { WeatherdataService} from './services/weatherdata.service'
+import { WeatherdataService } from './services/weatherdata.service';
+import { SelectionComponent } from './components/weather/selection/selection.component'
 
 @NgModule({
   declarations: [
     AppComponent, 
     FooterComponent, 
-    WcagComponent, 
+    //WcagComponent, 
     HomeComponent, 
-    NavComponent, WeatherComponent
+    NavComponent, WeatherComponent, SelectionComponent
   ],
   imports: [
     BrowserModule,
     ProfileModule,
     AuthModule,
     TodosModule,
-    FormsModule, 
-    ReactiveFormsModule,
-    HttpClientModule, RouterModule.forRoot(allAppRoutes)
+    FormsModule, HttpClientModule
   ],
   providers: [WeatherdataService],
   bootstrap: [AppComponent]
