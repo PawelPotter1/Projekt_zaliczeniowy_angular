@@ -14,6 +14,10 @@ import { HttpClientModule } from '@angular/common/http'
 import { WeatherComponent } from './components/weather/weather.component';
 import { WeatherdataService } from './services/weatherdata.service';
 import { SelectionComponent } from './components/weather/selection/selection.component'
+import { DataCountryComponent } from './components/data-country/data-country.component'
+import { SearchflightComponent } from './components/searchflight/searchflight.component'
+import { RecomentedCountriesComponent } from './components/recomented-countries/recomented-countries.component';
+import { TripComponent } from './components/trip/trip.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +25,9 @@ import { SelectionComponent } from './components/weather/selection/selection.com
     FooterComponent, 
     //WcagComponent, 
     HomeComponent, 
-    NavComponent, WeatherComponent, SelectionComponent
+    NavComponent, WeatherComponent, SelectionComponent,
+    DataCountryComponent, SearchflightComponent, RecomentedCountriesComponent,
+    TripComponent
   ],
   imports: [
     BrowserModule,

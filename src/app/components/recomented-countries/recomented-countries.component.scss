@@ -1,0 +1,31 @@
+.countries{
+    height: 200px;
+    background-color: lightskyblue;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-image: url(https://unsplash.com/photos/NJDyFoXDAus);
+    background-size: cover;
+  }
+  @media (max-width: 600px) {
+    .countries{
+      height: 500px;
+    }
+  }
+  
+  
+  .country{
+    width: 100px;
+    height: 100px;
+    
+    background-color: rgb(210, 232, 253);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 4px 4px 10px 0px rgba(119, 119, 119, 0.75);
+  }
+  
+  .country:hover {
+    box-shadow: none;
+  }
