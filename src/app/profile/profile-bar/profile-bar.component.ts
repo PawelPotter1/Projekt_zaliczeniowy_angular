@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
 import { ProfileService } from '../../services/profile.service';
 import { User } from '../models/user';
+import { WeatherdataService } from 'src/app/services/weatherdata.service';
 
 @Component({
   selector: 'profile-bar',
@@ -11,7 +12,9 @@ import { User } from '../models/user';
 export class ProfileBarComponent implements OnInit {
 
   constructor(private profileService:ProfileService, 
-              protected auth:AuthService) { }
+              protected auth:AuthService,
+              private weatherdataService: WeatherdataService) { }
+
 
   profile:User;
   myDate: Date;
@@ -21,6 +24,8 @@ export class ProfileBarComponent implements OnInit {
     .subscribe(user =>{
       this.profile = user
     })
+
   }
+
 
 }

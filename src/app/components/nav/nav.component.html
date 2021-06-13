@@ -8,13 +8,18 @@
                   Home
                 </a>
               </li>
-              <li class="nav-item active">
-                <!-- <a class="nav-link" (click)="tab = 'login' "> -->
-                  <a class="nav-link" href="#/searchflight">
-                  Znajdz lot
+              <ng-container *ngIf="!auth.isAuthenticated">
+                <li class="nav-item">
+                  <a class="nav-link" href="#/pogoda">
+                  Pogoda
                 </a>
               </li>
-              <ng-container *ngIf="!auth.isAuthenticated">
+                <li class="nav-item active">
+                  <!-- <a class="nav-link" (click)="tab = 'login' "> -->
+                    <a class="nav-link" href="#/searchflight">
+                    Znajdz lot
+                  </a>
+                </li>
               <li class="nav-item active">
                 <!-- <a class="nav-link" (click)="tab = 'login' "> -->
                   <a class="nav-link" href="#/login">

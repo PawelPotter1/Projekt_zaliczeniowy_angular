@@ -8,14 +8,18 @@ import { PageNotFoundComponent } from './components/page-not-found.component';
 import { TodosComponent } from './todos/todos.component';
 import { SearchflightComponent } from './components/searchflight/searchflight.component';
 import { RecomentedCountriesComponent } from './components/recomented-countries/recomented-countries.component';
+import { TripComponent } from './components/trip/trip.component';
+import { WeatherComponent } from './components/weather/weather.component';
 
 const routes:Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'login', component: LoginComponent},
   {path: 'profile', component: ProfileComponent},
   {path: 'todo', component: TodosComponent},
-  {path: 'searchFlight', component: SearchflightComponent},
-  {path: 'recomendetCountry', component: RecomentedCountriesComponent},
+  {path: 'searchflight', component: SearchflightComponent},
+  {path: 'country', component: RecomentedCountriesComponent},
+  {path: 'trip', component: TripComponent},
+  { path: 'pogoda', component: WeatherComponent},
   {path: 'not-found', component: PageNotFoundComponent},
   {path: '', redirectTo: 'home', pathMatch:'full'},
   {path: '**', redirectTo: 'not-found', pathMatch:'full'}

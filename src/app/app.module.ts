@@ -13,11 +13,11 @@ import { NavComponent } from './components/nav/nav.component';
 import { HttpClientModule } from '@angular/common/http'
 import { WeatherComponent } from './components/weather/weather.component';
 import { WeatherdataService } from './services/weatherdata.service';
-import { SelectionComponent } from './components/weather/selection/selection.component'
 import { DataCountryComponent } from './components/data-country/data-country.component'
 import { SearchflightComponent } from './components/searchflight/searchflight.component'
 import { RecomentedCountriesComponent } from './components/recomented-countries/recomented-countries.component';
 import { TripComponent } from './components/trip/trip.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,7 +25,7 @@ import { TripComponent } from './components/trip/trip.component';
     FooterComponent, 
     //WcagComponent, 
     HomeComponent, 
-    NavComponent, WeatherComponent, SelectionComponent,
+    NavComponent, WeatherComponent,
     DataCountryComponent, SearchflightComponent, RecomentedCountriesComponent,
     TripComponent
   ],
@@ -35,7 +35,8 @@ import { TripComponent } from './components/trip/trip.component';
     AuthModule,
     TodosModule,
     FormsModule, HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [WeatherdataService],
   bootstrap: [AppComponent]

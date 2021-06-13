@@ -7,6 +7,7 @@ export class FlightdetailService {
 
   constructor() { }
   placeOfDeparture;
-  placeOfDeparture2;
+  dateOfDeparture;
   placeOfArrival;
+  dateOfArrival;
 }
