@@ -33,7 +33,6 @@ export class WeatherComponent implements OnInit {
     this.weatherService.getWeather(formValue.location)
                     .subscribe(data=>{
                       // this.weatherData = data;
-                      // console.log(this.weatherData)
       this.weather.city = data['name']
       this.weather.conditions = data['weather'][0]['main']
       this.weather.temperature = Math.round((data['main']['temp']-273.15))
