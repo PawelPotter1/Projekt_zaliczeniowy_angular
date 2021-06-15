@@ -18,6 +18,7 @@ import { SearchflightComponent } from './components/searchflight/searchflight.co
 import { RecomentedCountriesComponent } from './components/recomented-countries/recomented-countries.component';
 import { TripComponent } from './components/trip/trip.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { SimpleloginComponent } from './components/simplelogin/simplelogin.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     HomeComponent, 
     NavComponent, WeatherComponent,
     DataCountryComponent, SearchflightComponent, RecomentedCountriesComponent,
-    TripComponent
+    TripComponent,
+    SimpleloginComponent
   ],
   imports: [
     BrowserModule,

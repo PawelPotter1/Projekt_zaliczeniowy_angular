@@ -1,0 +1,23 @@
+<h2>Werfikacja danych użytkownika</h2>
+<form #loginForm="ngForm">
+    <div class="wrapper">
+        <label for="login"> Login
+         <input required minlenght=4 ngModel type="text" name="login" placeholder="login" #login="ngModel">
+        </label>
+    </div>
+    <div class="wrapper">
+    <label for="password"> Hasło
+          <input required ngModel type="password" name="password" placeholder="password" #password="ngModel">
+    </label>
+     </div>
+        <button (click)="logon(login, password)">Zaloguj się</button>
+        <h2>Weryfikacja poprwaności logowania:</h2>
+        <div *ngIf="login.errors"> Nie wprowadzono poprawnego loginu</div>
+        <div *ngIf="login.errors?.minlenght"> Za krótki login, Liczba znaków: {{login.errors?.minlength.actualLength}}</div>
+        <div *ngIf="password.errors"> Nie wprowadzono poprawnego hasła</div>
+        {{ userVerify }}
+    </div>
+</form>
+
+
+

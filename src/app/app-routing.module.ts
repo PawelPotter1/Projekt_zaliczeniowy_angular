@@ -10,10 +10,12 @@ import { SearchflightComponent } from './components/searchflight/searchflight.co
 import { RecomentedCountriesComponent } from './components/recomented-countries/recomented-countries.component';
 import { TripComponent } from './components/trip/trip.component';
 import { WeatherComponent } from './components/weather/weather.component';
+import { SimpleloginComponent } from './components/simplelogin/simplelogin.component';
 
 const routes:Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'login', component: LoginComponent},
+  {path: 'simplelogin', component: SimpleloginComponent},
   {path: 'profile', component: ProfileComponent},
   {path: 'todo', component: TodosComponent},
   {path: 'searchflight', component: SearchflightComponent},
