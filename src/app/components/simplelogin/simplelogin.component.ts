@@ -9,7 +9,7 @@ import { users } from './users';
   styleUrls: ['./simplelogin.component.css']
 })
 export class SimpleloginComponent implements OnInit {
-  @Input () name: string;
+
   constructor(private router: Router) { }
 
   public userVerify = ''
