@@ -1,5 +1,7 @@
 <!--<p>{{ myDate | date: "dd/MM/yyyy HH:mm:ss"}}</p>-->
 <app-clock></app-clock>
+<p class="text-center">{{weather.city}}<img [src]="weather.icon" style="float: center;"/><span>temp: </span>{{weather.temperature}}</p>
+
 <ng-container *ngIf="profile">
  <strong>{{profile.name}}</strong>
  <span (click)="auth.logout()"> | Logout</span>
