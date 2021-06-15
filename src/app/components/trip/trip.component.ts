@@ -15,10 +15,16 @@ export class TripComponent implements OnInit {
   }
   departurePlaceOnScreen;
   arrivalPlaceOnScreen;
+  departureDateOnScreen;
+  arrivalDateOnScreen;
+  personsOnScreen;
 
   ngDoCheck() {
     this.departurePlaceOnScreen = this.flightdetails.placeOfDeparture;
     this.arrivalPlaceOnScreen = this.flightdetails.placeOfArrival;
+    this.departureDateOnScreen = this.flightdetails.dateOfDeparture;
+    this.arrivalDateOnScreen = this.flightdetails.dateOfArrival;
+    this.personsOnScreen = this.flightdetails.personsOfFlight;
   }
 
 }

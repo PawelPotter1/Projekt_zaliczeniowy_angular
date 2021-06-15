@@ -10,4 +10,5 @@ export class FlightdetailService {
   dateOfDeparture;
   placeOfArrival;
   dateOfArrival;
+  personsOfFlight;
 }

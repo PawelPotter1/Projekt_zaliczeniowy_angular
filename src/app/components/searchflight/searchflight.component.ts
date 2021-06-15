@@ -25,10 +25,16 @@ export class SearchflightComponent implements OnInit {
   ];
   departurePlaceInput;
   arrivalPlaceInput;
+  departureDateInput;
+  arrivalDateInput;
+  personsInput;
 
   save(){
     this.flightdetails.placeOfDeparture = this.departurePlaceInput;
     this.flightdetails.placeOfArrival = this.arrivalPlaceInput;
+    this.flightdetails.dateOfDeparture = this.departureDateInput;
+    this.flightdetails.dateOfArrival = this.arrivalDateInput;
+    this.flightdetails.personsOfFlight = this.personsInput;
     this.router.navigate(["/trip"])
   }
 }
