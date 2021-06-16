@@ -14,7 +14,7 @@
     <!-- </div> -->
     <div>
         <button (click)="logon(login, password)">Zaloguj się</button>
-        <h2>Weryfikacja poprwaności logowania:</h2>
+        <p>Weryfikacja poprwaności logowania:</p>
         <div *ngIf="login.errors"> Nie wprowadzono poprawnego loginu</div>
         <div *ngIf="login.errors?.minlenght"> Za krótki login, Liczba znaków: {{login.errors?.minlength.actualLength}}</div>
         <div *ngIf="password.errors"> Nie wprowadzono poprawnego hasła</div>

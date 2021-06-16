@@ -1,5 +1,8 @@
-<div class="countries">
-    <div  (click)="toggle('Malta')" class="country" >Malta</div>
-    <div  (click)="toggle('Hiszpania')" class="country" >Hiszpania</div>
-    <div  (click)="toggle('Grecja')" class="country" >Grecja</div>
+<!-- <div *ngFor="let country of countryDetails" class="countries"> -->
+  <div *ngFor="let item of countryDetails" class="countries">
+    <div  (click)="toCountryDetails('Francja')" class="country" >Francja</div>
+    <div  (click)="toCountryDetails('Hiszpania')" class="country" >Hiszpania</div>
+    <div  (click)="toCountryDetails('Włochy')" class="country" >Włochy</div>
+    <div  (click)="toCountryDetails('Szwajcaria')" class="country" >Szwajcaria</div>
+    <!-- <span (click)="toCountryDetails(country)" class="country"> {{ country.name}} </span> -->
   </div>

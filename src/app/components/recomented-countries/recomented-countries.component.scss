@@ -1,10 +1,10 @@
 .countries{
     height: 200px;
-    background-color: lightskyblue;
+    background-color: lightgray;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-image: url(https://unsplash.com/photos/NJDyFoXDAus);
+    background-image: url(https://ecsmedia.pl/c/fototapeta-hd-szare-miasto-550x270-cm-b-iext53628995.jpg);
     background-size: cover;
   }
   @media (max-width: 600px) {
@@ -18,12 +18,12 @@
     width: 100px;
     height: 100px;
     
-    background-color: rgb(210, 232, 253);
+    background-color: lightsteelblue;
     border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 4px 4px 10px 0px rgba(119, 119, 119, 0.75);
+    box-shadow: 4px 4px 10px 0px gray;
   }
   
   .country:hover {

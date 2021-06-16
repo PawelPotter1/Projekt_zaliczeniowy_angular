@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CountryDataService} from '../../services/country-data.service';
 import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
+import { countryDetails } from '../data-country/data';
 
 @Component({
   selector: 'app-recomented-countries',
@@ -20,7 +21,7 @@ export class RecomentedCountriesComponent implements OnInit {
 chosenCountry: any;
 buttonValue: string;
 
-toggle(country) {
+toCountryDetails(country) {
   this.countryData.chosenCountry = country;
   
   this.router.navigate(["/country"],

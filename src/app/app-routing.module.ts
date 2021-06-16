@@ -11,6 +11,7 @@ import { RecomentedCountriesComponent } from './components/recomented-countries/
 import { TripComponent } from './components/trip/trip.component';
 import { WeatherComponent } from './components/weather/weather.component';
 import { SimpleloginComponent } from './components/simplelogin/simplelogin.component';
+import { DataCountryComponent } from './components/data-country/data-country.component';
 
 const routes:Routes = [
   {path: 'home', component: HomeComponent},
@@ -20,8 +21,9 @@ const routes:Routes = [
   {path: 'todo', component: TodosComponent},
   {path: 'searchflight', component: SearchflightComponent},
   {path: 'country', component: RecomentedCountriesComponent},
+  {path: 'countrydetail',component: DataCountryComponent},
   {path: 'trip', component: TripComponent},
-  { path: 'pogoda', component: WeatherComponent},
+  {path: 'pogoda', component: WeatherComponent},
   {path: 'not-found', component: PageNotFoundComponent},
   {path: '', redirectTo: 'home', pathMatch:'full'},
   {path: '**', redirectTo: 'not-found', pathMatch:'full'}
@@ -34,6 +36,7 @@ const routes:Routes = [
       enableTracing: true,
       // errorHandler:()=>{},
       // initialNavigation:true,
+      // onSameUrlNavigation:'reload',
       useHash: true
     })
   ],

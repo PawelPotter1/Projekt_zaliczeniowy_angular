@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {CountryDataService} from '../../services/country-data.service';
 import { ActivatedRoute} from '@angular/router';
-import { data } from './data'
+import { countryDetails } from './data'
 
 @Component({
   selector: 'app-data-country',
@@ -20,13 +20,13 @@ export class DataCountryComponent implements OnInit {
   ngOnInit(): void {
     this.activateRoute.queryParamMap.subscribe(val => {
 
-      for (let i=0;i<data.length; i++) {
-        console.log(data[i])
+      for (let i=0;i<countryDetails.length; i++) {
+        console.log(countryDetails[i])
       }
 
     this.chosenCountry = val.get.name;
     if (this.chosenCountry === 'Hiszpania') {
-      this.population = Object(data).details;
+      this.population = Object(countryDetails).details;
     } 
 
     })

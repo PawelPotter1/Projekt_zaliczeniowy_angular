@@ -1,30 +1,27 @@
 <form>
     <div class="form-row">
-      <div class="form-group col-md-6">
+      <div class="form-group col-md-4 mr-3">
         <label for="from_place">START</label>
         <select name="from_place" [(ngModel)]="departurePlaceInput">
           <option *ngFor="let place of departurePlaces" value="{{place.code}}">{{place.city}}</option>
         </select>
       </div>
-      <div class="form-group col-md-6">
+      <div class="form-group col-md-4 mr-3">
         <label for="from">CEL</label>
         <select name="from_place" [(ngModel)]="arrivalPlaceInput">
           <option *ngFor="let place of arrivalPlaces" value="{{place.code}}">{{place.city}}</option>
         </select>
       </div>
     </div>
-    <div class="form-row col-md-6">
+    <div class="form-row col-md-4 mr-3">
       <div class="form-group">
-        <label for="from_date">Z:</label>
+        <label for="from_date">OD:</label>
         <input name="from_date" [(ngModel)]="departureDateInput" type="date" class="datepicker" id="from_date" required />
-      </div>
-  
-      <div class="form-group col-md-6">
-        <label for="from_date">DO:</label>
+        <label for="from_date"> DO:</label>
         <input name="from_date" [(ngModel)]="arrivalDateInput" type="date" class="datepicker" id="to_date" required />
       </div>
     </div>
-    <div class="data_input">
+    <div class="data_input form-row col-md-4 mr-3">
       <label for="people_amount">Liczba pasażerów:</label>
       <select name="people_amount" [(ngModel)]="personsInput" id="people">
         <option value="1">1</option>
@@ -37,7 +34,7 @@
         <option value="8">8</option>
       </select>
     </div>
-    <button  (click)="save()" class="btn btn-secondary btn-lg btn-block">Pokaż</button>
+    <button  (click)="save()" class="btn btn-primary btn-lg btn-block mr-3">Pokaż</button>
   </form>
   
   <app-recomented-countries></app-recomented-countries>

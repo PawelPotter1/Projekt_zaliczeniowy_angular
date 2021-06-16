@@ -1,10 +1,9 @@
-const data = [
+const countryDetails = [
     {
-      name: 'Malta',
+      name: 'Francja',
       details: {
-        subtitle: 'Malta',
         population: 1000000,
-        language: 'aaa',
+        language: 'francuski',
         currency: 'EUR',
         area: 1000000
       }
@@ -12,24 +11,22 @@ const data = [
     {
       name: 'Hiszpania',
       details: {
-        subtitle: 'Espania',
         population: 3000000,
-        language: 'bbb',
+        language: 'hiszpański',
         currency: 'EUR',
         area: 3000000
       }
     },
     {
-      name: 'Grecja',
+      name: 'Włochy',
       details: {
-        subtitle: 'Greece',
         population: 400000,
-        language: 'ccc',
+        language: 'włoski',
         currency: 'EUR',
         area: 4000000
       }
     }
   ];
   
-  export { data };
+  export { countryDetails };
   

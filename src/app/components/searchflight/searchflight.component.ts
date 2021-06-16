@@ -15,13 +15,13 @@ export class SearchflightComponent implements OnInit {
   ngOnInit() {}
   departurePlaces = [
     { code: 'KTW', city: 'Katowice' },
-    { code: 'WR', city: 'Wrocław' },
-    { code: 'GD', city: 'Gdańsk' }
+    { code: 'WRO', city: 'Wrocław' },
+    { code: 'POZ', city: 'Poznań' }
   ];
   arrivalPlaces = [
-    { code: 'CHA', city: 'Chania' },
-    { code: 'FR', city: 'Franfurkt' },
-    { code: 'BR', city: 'Bruksela' }
+    { code: 'NYC', city: 'New York' },
+    { code: 'FRA', city: 'Franfurkt' },
+    { code: 'WAW', city: 'Warszawa' }
   ];
   departurePlaceInput;
   arrivalPlaceInput;
