@@ -1,0 +1,53 @@
+section{
+    height: 70vh;
+    background-image: url(https://images.unsplash.com/photo-1587240852847-64aa45b0a993?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #france{
+    background-image: url(https://ecsmedia.pl/c/obraz-francja-paryz-120x80-cm-b-iext52453539.jpg);
+  }
+
+  #italy{
+    background-image: url(https://www.medicover.pl/Data/Thumbs/storage_files/2021/5/6/d55d62da-b99e-4f95-9542-3ec4e49603a0/wlochy-covid-obostrzenia.webp?preset=1200x900)
+  }
+
+  #spain{
+    background-image: url(https://flipohity.pl/wp-content/uploads/2019/04/Flydragonfly-Dreamstime.com-cadaques.jpg)
+  }
+
+  #swis{
+    background-image: url(https://www.aplikuj.pl/userfiles/porady/1780/156284190124013200.jpg)
+  }
+
+  @media (max-width: 600px) {
+    section {
+      height: 80vh;
+    }
+  }
+  .information{
+    width: 200px;
+    height: 200px;
+    background-color: lightgray;
+    border-radius: 10px;
+    padding: 30px;
+     display: flex;
+     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  p{
+    font-weight: bold;
+    padding-bottom: 10px;
+    font-size: 20px;
+  }
+  td{
+    width: 200px;
+    padding: 5px;
+  }
+  
