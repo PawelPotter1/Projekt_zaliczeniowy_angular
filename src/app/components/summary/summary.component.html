@@ -1,0 +1,51 @@
+<h1>Podsumowanie</h1>
+<div>
+    <div class="trip-filds form-group">
+        <div><label>Miejsce odlotu: </label>
+            <span><strong>{{OnScreen.departurePlace}}</strong></span>
+        </div>       
+        <label>Miejsce doeclowe:</label> 
+        <span><strong>{{OnScreen.arrivalPlace}}</strong></span>
+    </div>
+    <div>
+        <div>
+        <label>Data odlotu: </label>
+            <span><strong>{{OnScreen.departureDate | date: "dd.MM.yyyy"}}</strong></span>
+        </div>
+        <label>Data powrotu: </label>
+        <span><strong>{{OnScreen.arrivalDate | date: "dd.MM.yyyy"}}</strong></span>
+    </div>
+    <div>
+        <label>Liczba pasażerów: </label><span><strong>{{OnScreen.persons}}</strong></span>
+    <br>
+    </div>
+</div>
+<div>
+    <div>
+        <label class="form-check-label">
+        <input class="form-check-input" type="checkbox" [(ngModel)]="OnScreen.senior"> Senior
+        </label>
+        <label class="form-check-label">
+        <input class="form-check-input" type="checkbox" [(ngModel)]="OnScreen.kid"> Dziecko
+        </label>
+    </div>
+    <div>
+        <div class="form-chck">
+            <label class="form-check-label">
+                <input class="form-check-input" type="radio" value="smal" [(ngModel)]="OnScreen.bagage">
+                Podręczny
+            </label>
+            <label class="form-check-label">
+                <input class="form-check-input" type="radio" value="nonregistered" [(ngModel)]="OnScreen.bagage">
+                Mały - nierejestrowany
+            </label>
+            <label class="form-check-label">
+                <input class="form-check-input" type="radio" value="registered" [(ngModel)]="OnScreen.bagage">
+                Rejestrowany
+            </label>
+        </div>
+    </div>
+</div>
+<br>
+<a routerLink="/trip"> Popraw parametry lotu </a>
+<br>
