@@ -8,7 +8,7 @@ import { TodosService } from './todos.service';
     <div class="alert alert-danger" *ngIf="error">{{error}}</div>
     <div class="alert alert-success" *ngIf="message">{{message}}</div>
 
-      <h3>Create Todo</h3>
+      <h3>Dodaj opinię</h3>
       <div class="form-group">
         <input type="text" class="form-control" #titleRef>
       </div>

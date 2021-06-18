@@ -4,7 +4,7 @@ import { ProfileService } from '../../services/profile.service';
 import { User } from '../models/user';
 import { WeatherdataService } from 'src/app/services/weatherdata.service';
 import { HttpClient } from '@angular/common/http';
-import { Weathermodel } from 'src/app/components/weather/weathermodel';
+import { Weathermodel } from 'src/app/components/weather/models/weathermodel';
 
 const pageUrl: String = 'https://api.openweathermap.org/data/2.5/weather'
 const apiKey: String =  '6a25213c0c3b697479aff43cfb1aa86c'

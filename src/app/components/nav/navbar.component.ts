@@ -20,6 +20,11 @@ import { AuthService } from '../../services/auth.service';
             </a>
           </li>
           <li class="nav-item">
+          <a class="nav-link" href="#/registration">
+            Rejestracja
+          </a>
+        </li>
+          <li class="nav-item">
             <a class="nav-link" href="#/todos">
               Todos
             </a>

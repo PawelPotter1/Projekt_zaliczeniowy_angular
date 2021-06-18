@@ -10,20 +10,24 @@ import { SearchflightComponent } from './components/searchflight/searchflight.co
 import { RecomentedCountriesComponent } from './components/recomented-countries/recomented-countries.component';
 import { TripComponent } from './components/trip/trip.component';
 import { WeatherComponent } from './components/weather/weather.component';
-import { SimpleloginComponent } from './components/simplelogin/simplelogin.component';
+import { SimpleloginComponent } from './simplelogin/simplelogin.component';
 import { DataCountryComponent } from './components/data-country/data-country.component';
+import { RegistrationComponent } from './auth/registration.component';
+import { SummaryComponent } from './components/summary/summary.component';
 
 const routes:Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'login', component: LoginComponent},
   {path: 'simplelogin', component: SimpleloginComponent},
   {path: 'profile', component: ProfileComponent},
-  {path: 'todo', component: TodosComponent},
+  {path: 'opinie', component: TodosComponent},
   {path: 'searchflight', component: SearchflightComponent},
   {path: 'country', component: RecomentedCountriesComponent},
   {path: 'countrydetail',component: DataCountryComponent},
   {path: 'trip', component: TripComponent},
   {path: 'pogoda', component: WeatherComponent},
+  {path: 'summary', component: SummaryComponent},
+  {path: 'registration', component: RegistrationComponent},
   {path: 'not-found', component: PageNotFoundComponent},
   {path: '', redirectTo: 'home', pathMatch:'full'},
   {path: '**', redirectTo: 'not-found', pathMatch:'full'}
@@ -37,7 +41,7 @@ const routes:Routes = [
       // errorHandler:()=>{},
       // initialNavigation:true,
       // onSameUrlNavigation:'reload',
-      useHash: true
+      //useHash: true
     })
   ],
   exports: [RouterModule]

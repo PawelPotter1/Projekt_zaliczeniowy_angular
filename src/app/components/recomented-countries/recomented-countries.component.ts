@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { CountryDataService} from '../../services/country-data.service';
 import { Router } from '@angular/router';
-import { ActivatedRoute } from '@angular/router';
 import { countryDetails } from '../data-country/data';
+import { DeclarationListEmitMode } from '@angular/compiler';
+//import { countryDetails } from '../data-country/data';
 
 @Component({
   selector: 'app-recomented-countries',
@@ -11,9 +12,8 @@ import { countryDetails } from '../data-country/data';
 })
 export class RecomentedCountriesComponent implements OnInit {
 
-  constructor(private countryData: CountryDataService, private router:Router) { 
-
-  }
+  constructor(private countryData: CountryDataService, 
+              private router:Router) {  }
 
   ngOnInit(): void {
   }
@@ -21,15 +21,20 @@ export class RecomentedCountriesComponent implements OnInit {
 chosenCountry: any;
 buttonValue: string;
 
-toCountryDetails(country) {
-  this.countryData.chosenCountry = country;
-  
-  this.router.navigate(["/country"],
+data = countryDetails;
+
+toCountryDetails(param) {
+  this.countryData.chosenCountry = param;
+
+  this.router.navigate(['countrydetail'],
       {queryParams:
         {
-        name: country,
-        capital: country.capital,
-        lang: country.language
+        id: param.id,
+        name: param.name,
+        capital: param.details.capital,
+        population: param.details.population,
+        lang: param.details.language
+
         }
       })
   } 

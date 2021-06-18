@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ClockComponent implements OnInit {
 
   myDate: Date;
-
+  
   constructor() { }
 
   ngOnInit(): void {

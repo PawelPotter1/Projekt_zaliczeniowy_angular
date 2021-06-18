@@ -18,7 +18,8 @@ import { SearchflightComponent } from './components/searchflight/searchflight.co
 import { RecomentedCountriesComponent } from './components/recomented-countries/recomented-countries.component';
 import { TripComponent } from './components/trip/trip.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { SimpleloginComponent } from './components/simplelogin/simplelogin.component';
+import { SimpleloginComponent } from './simplelogin/simplelogin.component';
+import { SummaryComponent } from './components/summary/summary.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { SimpleloginComponent } from './components/simplelogin/simplelogin.compo
     NavComponent, WeatherComponent,
     DataCountryComponent, SearchflightComponent, RecomentedCountriesComponent,
     TripComponent,
-    SimpleloginComponent
+    SimpleloginComponent,
+    SummaryComponent
   ],
   imports: [
     BrowserModule,

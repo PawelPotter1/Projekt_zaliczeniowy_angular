@@ -1,29 +1,32 @@
 <form>
     <div class="form-row">
-      <div class="form-group col-md-4 mr-3">
-        <label for="from_place">START</label>
-        <select name="from_place" [(ngModel)]="departurePlaceInput">
-          <option *ngFor="let place of departurePlaces" value="{{place.code}}">{{place.city}}</option>
+<!-- <div>Dzisiaj jest: {{today | date: "dd/MM/yyyy"}}</div> -->
+      <div class="form-group col-md-4 col-md-offset-4 mr-3 mx-auto">
+        <label for="from_place">Miejsce wylotu:</label>
+        <select name="from_place" [(ngModel)]="Input.departurePlace">
+          <option  *ngFor="let place of departurePlaces" value="{{place.city}}">{{place.city}}</option>
         </select>
       </div>
-      <div class="form-group col-md-4 mr-3">
-        <label for="from">CEL</label>
-        <select name="from_place" [(ngModel)]="arrivalPlaceInput">
-          <option *ngFor="let place of arrivalPlaces" value="{{place.code}}">{{place.city}}</option>
+      <div class="form-group col-md-4 mr-3 mx-auto">
+        <label for="from">Miejsce docelowe:</label>
+        <select name="from_place" [(ngModel)]="Input.arrivalPlace">
+          <option *ngFor="let place of arrivalPlaces" value="{{place.city}}">{{place.city}}</option>
         </select>
       </div>
     </div>
-    <div class="form-row col-md-4 mr-3">
-      <div class="form-group">
-        <label for="from_date">OD:</label>
-        <input name="from_date" [(ngModel)]="departureDateInput" type="date" class="datepicker" id="from_date" required />
-        <label for="from_date"> DO:</label>
-        <input name="from_date" [(ngModel)]="arrivalDateInput" type="date" class="datepicker" id="to_date" required />
+    <div class="form-row col-md-4 mr-3 mx-auto">
+      <div class="form-group mr-3">
+        <label for="from_date">Podaj datę wylotu:</label>
+        <input name="from_date" [(ngModel)]="Input.departureDate" type="date" class="datepicker" id="from_date" required />
+       </div>
+        <div class="form-group">  
+        <label for="from_date"> Podaj datę powrotu:</label>
+        <input name="from_date" [(ngModel)]="Input.arrivalDate" type="date" class="datepicker" id="to_date" required />
       </div>
     </div>
-    <div class="data_input form-row col-md-4 mr-3">
+    <div class="data_input form-row col-md-8 mr-3">
       <label for="people_amount">Liczba pasażerów:</label>
-      <select name="people_amount" [(ngModel)]="personsInput" id="people">
+      <select name="people_amount" [(ngModel)]="Input.persons" id="people">
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>

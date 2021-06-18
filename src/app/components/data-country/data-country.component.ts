@@ -10,24 +10,42 @@ import { countryDetails } from './data'
 })
 export class DataCountryComponent implements OnInit {
 
-  constructor(private countryData: CountryDataService, private activateRoute: ActivatedRoute ) { 
+  constructor(private countryData: CountryDataService, 
+              private activateRoute: ActivatedRoute ) { 
 
   }
 
   chosenCountry;
   population;
+  lang;
+  country;
+  capital;
+  currency;
+  ludnosc;
+  countryDetails;
+  name;
+  id;
+  area;
 
   ngOnInit(): void {
-    this.activateRoute.queryParamMap.subscribe(val => {
+    this.activateRoute.queryParams.subscribe(
+      data => {
+        this.chosenCountry = data.get.name;
 
-      for (let i=0;i<countryDetails.length; i++) {
-        console.log(countryDetails[i])
-      }
+        this.id = data.get.id,
+        this.name = data.name.value,
+        this.capital =  Object(countryDetails).details,
+        this.population = data.details.population.value,
+        this.lang = data.details.language.value
+      this.country = data.get.name;
+      this.capital = data.capital.value;
+      this.currency = data.get.currency;
+      this.area = data.get.area;
 
-    this.chosenCountry = val.get.name;
-    if (this.chosenCountry === 'Hiszpania') {
-      this.population = Object(countryDetails).details;
-    } 
+    //  this.chosenCountry = data.get.name;
+    //  if (this.chosenCountry === 'Hiszpania') {
+    //    this.population = Object(countryDetails).details;
+    //  } 
 
     })
   }

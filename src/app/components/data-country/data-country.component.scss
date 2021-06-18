@@ -8,6 +8,23 @@ section{
     justify-content: center;
     align-items: center;
   }
+
+  #france{
+    background-image: url(https://ecsmedia.pl/c/obraz-francja-paryz-120x80-cm-b-iext52453539.jpg);
+  }
+
+  #italy{
+    background-image: url(https://www.medicover.pl/Data/Thumbs/storage_files/2021/5/6/d55d62da-b99e-4f95-9542-3ec4e49603a0/wlochy-covid-obostrzenia.webp?preset=1200x900)
+  }
+
+  #spain{
+    background-image: url(https://flipohity.pl/wp-content/uploads/2019/04/Flydragonfly-Dreamstime.com-cadaques.jpg)
+  }
+
+  #swis{
+    background-image: url(https://www.aplikuj.pl/userfiles/porady/1780/156284190124013200.jpg)
+  }
+
   @media (max-width: 600px) {
     section {
       height: 80vh;
