@@ -1,0 +1,31 @@
+ .countries{
+     height: 120px;
+     background-color: lightgray;
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     background-image: url(https://ecsmedia.pl/c/fototapeta-hd-szare-miasto-550x270-cm-b-iext53628995.jpg);
+     background-size: cover;
+   }
+//   @media (max-width: 600px) {
+//     .countries{
+//       height: 500px;
+//     }
+//   }
+  
+  
+   .country{
+     width: 100px;
+     height: 50px;
+    
+//     background-color: lightsteelblue;
+     border-radius: 5px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     box-shadow: 4px 4px 10px 0px gray;
+   }
+  
+   .country:hover {
+     box-shadow: none;
+   }
