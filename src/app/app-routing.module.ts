@@ -29,7 +29,7 @@ const routes:Routes = [
   {path: 'summary', component: SummaryComponent},
   {path: 'registration', component: RegistrationComponent},
   {path: 'not-found', component: PageNotFoundComponent},
-  {path: '', redirectTo: 'home', pathMatch:'full'},
+  {path: '', redirectTo: 'searchflight', pathMatch:'full'},
   {path: '**', redirectTo: 'not-found', pathMatch:'full'}
 ]
 

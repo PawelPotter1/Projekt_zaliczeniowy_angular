@@ -16,6 +16,7 @@ export class DataCountryComponent implements OnInit {
   }
 
   chosenCountry;
+
   population;
   lang;
   country;
@@ -31,8 +32,8 @@ export class DataCountryComponent implements OnInit {
     this.activateRoute.queryParams.subscribe(
       data => {
         this.chosenCountry = data.get.name;
-
-        this.id = data.get.id,
+        console.log(data.get.name)
+        this.countryDetails.id = data.get.id,
         this.name = data.name.value,
         this.capital =  Object(countryDetails).details,
         this.population = data.details.population.value,

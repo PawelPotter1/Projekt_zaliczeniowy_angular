@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms'
+import { Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
 
 @Component({
@@ -16,10 +17,12 @@ export class LoginComponent implements OnInit {
   message: string;
 
   constructor(private fb:FormBuilder,
-            private auth:AuthService) { }
+            private auth:AuthService,
+            private router:Router) { }
 
   login(){
-    this.auth.login(this.loginForm.value)
+    this.auth.login(this.loginForm.value);
+     this.router.navigate(["/searchflight"])
   }
 
   ngOnInit() {

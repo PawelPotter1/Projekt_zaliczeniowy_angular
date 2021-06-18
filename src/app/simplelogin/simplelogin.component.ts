@@ -31,7 +31,7 @@ logon(login,password){
        break;
      }
     else{
-      this.userVerify = "Podano niepoprawne dane użytkonika lub hasła"
+      this.userVerify = "Podano niepoprawne dane użytkonika lub hasła (test1/haslo1)"
      }
     }
   }

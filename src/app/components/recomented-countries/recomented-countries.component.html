@@ -1,8 +1,10 @@
 <!-- <div class="countries"> -->
+<div class="row">
   <div *ngFor="let items of data" class="countries">
     <!-- <div  (click)="toCountryDetails('Francja')" class="country" >Francja</div>
     <div  (click)="toCountryDetails('Hiszpania')" class="country" >Hiszpania</div>
     <div  (click)="toCountryDetails('Włochy')" class="country" >Włochy</div>
     <div  (click)="toCountryDetails('Szwajcaria')" class="country" >Szwajcaria</div> -->
-    <span (click)="toCountryDetails(items)" class="country"> {{ items.name}} </span>
-  </div>
+    <div (click)="toCountryDetails(items)" class="country"> {{ items.name}} </div>
+    </div>
+</div>

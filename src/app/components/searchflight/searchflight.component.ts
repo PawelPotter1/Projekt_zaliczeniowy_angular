@@ -92,7 +92,6 @@ this.airplane = this.checkAirplane(this.Input.departurePlace, this.Input.arrival
          {  this.isValid = false; alert('Data wylotu jest późniejsza niż przylotu')}
       if(this.Input.persons = null) 
          {  this.isValid = false; alert("Nie wskzałeś ilości miejsc do rezerwacji") }    
-        if (this.isValid){ this.router.navigate(["/trip"]) } 
-        else {this.isValid = true; console.log('Miejsce wyloty jest takie samo jak lądowania?')}
+        if (this.isValid){ this.router.navigate(["/simplelogin"]) }
   }
 }
