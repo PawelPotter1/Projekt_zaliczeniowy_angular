@@ -15,6 +15,7 @@ export class FlightdetailService {
   kid;
   senior;
   bagage;
+  airplane;
 
   flightDateils: flightDetailsModel = {
     departurePlace: 'Wrocław',

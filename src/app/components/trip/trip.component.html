@@ -1,4 +1,4 @@
-<h1>Szczegóły lotu</h1>
+<h1>Szczegóły lotu {{airplane}}</h1>
 <div>
     <div class="trip-filds form-group">
         <label>Miejsce odlotu: </label>
@@ -21,7 +21,8 @@
         <label class="form-check-label">
         <input class="form-check-input" type="checkbox" [(ngModel)]="OnScreen.kid"> Dziecko
         </label>
-        <div class="form-chck">
+        <div class="form-check">
+			<p>Rodzaj bagażu</p>
             <label class="form-check-label">
                 <input class="form-check-input" type="radio" value="smal" [(ngModel)]="OnScreen.bagage">
                 Podręczny

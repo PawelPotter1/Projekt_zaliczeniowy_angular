@@ -3,6 +3,8 @@ import {FlightdetailService} from '../../services/flightdetail.service';
 import {Router} from '@angular/router';
 import { flightDetailsModel } from './flightDetailsModel';
 
+let a: number = 0;
+let b: number = 0;
 
 @Component({
   selector: 'app-searchflight',
@@ -15,6 +17,12 @@ export class SearchflightComponent implements OnInit {
   }
 
   ngOnInit() {}
+
+  ngDoCheck(){
+if (this.Input.departurePlace!==''||this.Input.arrivalPlace!=='')
+this.airplane = this.checkAirplane(this.Input.departurePlace, this.Input.arrivalPlace!=='')
+  }
+
   departurePlaces = [
     { code: 'KTW', city: 'Katowice', local: 1 },
     { code: 'WRO', city: 'Wrocław', local: 1 },
@@ -25,6 +33,16 @@ export class SearchflightComponent implements OnInit {
     { code: 'FRA', city: 'Franfurkt', local: 2 },
     { code: 'WAW', city: 'Warszawa', local: 1 }
   ];
+
+
+  // departurePlaceInput;
+  // arrivalPlaceInput;
+  // departureDateInput;
+  // arrivalDateInput;
+  // personsInput:number
+  isValid:boolean = true;
+  today: number = Date.now();
+  airplane: number = 0;
 
   Input: flightDetailsModel = {
     departurePlace: '',
@@ -38,16 +56,19 @@ export class SearchflightComponent implements OnInit {
     price: 0
   }
 
-  // departurePlaceInput;
-  // arrivalPlaceInput;
-  // departureDateInput;
-  // arrivalDateInput;
-  // personsInput:number
-  isValid:boolean = true;
-  today: number = Date.now();
-
-  doCheck(){
-
+   checkAirplane(placeDeparture, arrivalPlace) {
+     for(let i=0;i++;this.departurePlaces.length) {
+       if (this.departurePlaces[i].city==placeDeparture) 
+       a = this.departurePlaces[i].local;
+     }
+     for(let i=0;i++;this.arrivalPlaces.length) {
+      if (this.arrivalPlaces[i].city==arrivalPlace) 
+       if (a<this.arrivalPlaces[i].local) {a=this.arrivalPlaces[i].local};
+     }
+  //   console.log("suma: "+a)
+  //   this.flightdetails.airplane = a;
+  //   this.airplane = a;
+    return a
   }
 
   save(){
@@ -56,7 +77,7 @@ export class SearchflightComponent implements OnInit {
     this.flightdetails.dateOfDeparture = this.Input.departureDate;
     this.flightdetails.dateOfArrival = this.Input.arrivalDate;
     this.flightdetails.personsOfFlight = this.Input.persons;
-    
+    this.flightdetails.airplane = 1
     if(this.Input.departurePlace == '' || this.Input.arrivalPlace=='') 
         {  this.isValid = false; alert("Nie wypełniłeś miejsca startu lub lądowania") }
     if(this.Input.departurePlace == this.Input.arrivalPlace) 
@@ -69,7 +90,7 @@ export class SearchflightComponent implements OnInit {
          {  this.isValid = false;  alert('Data wylotu lub powrotu jest z przeszłości')}
      if(this.Input.departureDate > this.Input.arrivalDate) 
          {  this.isValid = false; alert('Data wylotu jest późniejsza niż przylotu')}
-      if(this.Input.persons = 0) 
+      if(this.Input.persons = null) 
          {  this.isValid = false; alert("Nie wskzałeś ilości miejsc do rezerwacji") }    
         if (this.isValid){ this.router.navigate(["/trip"]) } 
         else {this.isValid = true; console.log('Miejsce wyloty jest takie samo jak lądowania?')}

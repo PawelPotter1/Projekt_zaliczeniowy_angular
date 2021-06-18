@@ -8,13 +8,16 @@
         <span><strong>{{OnScreen.arrivalPlace}}</strong></span>
     </div>
     <div>
+        <div>
         <label>Data odlotu: </label>
-        <span><strong>{{OnScreen.departureDate | date: "dd.MM.yyyy"}}</strong></span>
+            <span><strong>{{OnScreen.departureDate | date: "dd.MM.yyyy"}}</strong></span>
+        </div>
         <label>Data powrotu: </label>
-        <span><p><strong>{{OnScreen.arrivalDate | date: "dd.MM.yyyy"}}</strong></p></span>
+        <span><strong>{{OnScreen.arrivalDate | date: "dd.MM.yyyy"}}</strong></span>
     </div>
     <div>
-        <label>Liczba pasażerów: </label><span>{{OnScreen.persons}}</span>
+        <label>Liczba pasażerów: </label><span><strong>{{OnScreen.persons}}</strong></span>
+    <br>
     </div>
 </div>
 <div>

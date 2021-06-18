@@ -1,4 +1,3 @@
-import { TmplAstRecursiveVisitor } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FlightdetailService} from '../../services/flightdetail.service';
@@ -13,6 +12,8 @@ import { flightDetailsModel } from '../searchflight/flightDetailsModel';
 export class TripComponent implements OnInit {
 
   constructor(private flightdetails: FlightdetailService, private router:Router) { }
+
+  airplane = this.flightdetails.airplane;
 
   ngOnInit(): void {
     this.OnScreen.departurePlace = this.flightdetails.placeOfDeparture;
@@ -37,25 +38,33 @@ export class TripComponent implements OnInit {
     price: 0
   }
 
-checkAirplan(departurePlace, arrivalPlace) {
-    
-}
-
   // departurePlaceOnScreen;
   // arrivalPlaceOnScreen;
   // departureDateOnScreen;
   // arrivalDateOnScreen;
   // personsOnScreen;
 
-  ngDoCheck() {
+  onScreen(){
     this.flightdetails.placeOfDeparture = this.OnScreen.departurePlace;
-     this.flightdetails.placeOfArrival = this.OnScreen.arrivalPlace;
-     this.flightdetails.dateOfDeparture = this.OnScreen.departureDate;
-     this.flightdetails.dateOfArrival = this.OnScreen.arrivalDate;
-     this.flightdetails.personsOfFlight = this.OnScreen.persons;
-     this.flightdetails.kid = this.OnScreen.kid;
-     this.flightdetails.senior = this.OnScreen.senior;
-     this.flightdetails.bagage = this.OnScreen.bagage;
+    this.flightdetails.placeOfArrival = this.OnScreen.arrivalPlace;
+    this.flightdetails.dateOfDeparture = this.OnScreen.departureDate;
+    this.flightdetails.dateOfArrival = this.OnScreen.arrivalDate;
+    this.flightdetails.personsOfFlight = this.OnScreen.persons;
+    this.flightdetails.kid = this.OnScreen.kid;
+    this.flightdetails.senior = this.OnScreen.senior;
+    this.flightdetails.bagage = this.OnScreen.bagage;
   }
+
+  ngDoCheck() {
+    this.onScreen();
+    //  if(this.flightdetails.senior && this.flightdetails.kid) 
+    //     {   alert("Zniżki nie mogą obowiązywać jednocześnie dla dzieci i seniorów") 
+    //     this.flightdetails.senior == false
+    //     this.flightdetails.kid == false
+    //     break
+    //     }
+  }
+
+  
 
 }
