@@ -1,0 +1,27 @@
+<div class="col-md-6">
+    <h3 class="text-center my-4">Pogoda:</h3>
+    <form [formGroup]="weatherSearchForm" 
+            (ngSubmit)="sendTo(weatherSearchForm.value)">
+      <div class="form-group">
+        <input
+          class="form-control"
+          type="text"
+          id="weatherLocation"
+          aria-describedby="weatherLocation"
+          placeholder="Wprowadź lokalizację"
+          formControlName="location" />
+      </div>
+      <div class="text-center">
+        <button type="submit" class="btn btn-success btn-md">
+          Pokaż pogodę
+        </button>
+      </div>
+    </form>
+  </div>
+  <div class="col-md-6">
+    <h3 class="text-center my-4">Szczegóły pogody:</h3>
+    <p class="text-center">Bieżaca pogoda dla: {{weather.city}}</p>
+    <p class="text-center"><img [src]="weather.icon" style="float: center;"/></p>
+    <p class="text-center">Temperatur: {{weather.temperature}}</p>
+    <p class="text-center">Zachmurzenie: {{weather.conditions}}</p>
+  </div>
