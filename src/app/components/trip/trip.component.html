@@ -1,27 +1,32 @@
 <h1>Szczegóły lotu {{airplane}}</h1>
 <div>
     <div class="trip-filds form-group">
-        <label>Miejsce odlotu: </label>
-        <input type="text" class="form-control" [(ngModel)]="OnScreen.departurePlace">
-        <!-- {{OnScreen.departurePlace}} -->
-        <label>Miejsce doeclowe:</label> 
-        <input type="text" class="form-control" [(ngModel)]="OnScreen.arrivalPlace">
-        <!-- {{OnScreen.arrivalPlace}} -->
+		<div class="row">
+        	<label>Miejsce odlotu: </label>
+        		<input type="text" class="form-control" [(ngModel)]="OnScreen.departurePlace" style="width: 25%;">
+        		<!-- {{OnScreen.departurePlace}} -->
+       		 <label>Miejsce docelowe:</label> 
+       		 <input type="text" class="form-control" [(ngModel)]="OnScreen.arrivalPlace" style="width: 25%;">
+		</div>
+		<!-- {{OnScreen.arrivalPlace}} -->
         <label>Data odlotu: </label>
-        <input type="text" class="form-control" [(ngModel)]="OnScreen.departureDate">
+        <input type="text" class="form-control" [(ngModel)]="OnScreen.departureDate" style="width: 25%;">
         <!-- {{OnScreen.departureDate | date: "dd.MM.yyyy"}} -->
         <label>Data powrotu: </label>
-        <input type="text" class="form-control" [(ngModel)]="OnScreen.arrivalDate">
+        <input type="text" class="form-control" [(ngModel)]="OnScreen.arrivalDate" style="width: 25%;">
         <!-- <p>{{OnScreen.arrivalDate | date: "dd.MM.yyyy"}}</p> -->
         <label>Liczba pasażerów: </label>
-        <input type="text" class="form-control" [(ngModel)]="OnScreen.persons">
-        <label class="form-check-label">
-        <input class="form-check-input" type="checkbox" [(ngModel)]="OnScreen.senior"> Senior
-        </label>
-        <label class="form-check-label">
-        <input class="form-check-input" type="checkbox" [(ngModel)]="OnScreen.kid"> Dziecko
-        </label>
-        <div class="form-check">
+        <input type="text" class="form-control" [(ngModel)]="OnScreen.persons" style="width: 25%;">
+        <div>
+			<label class="form-check-label">
+        		<input class="form-check-input" name="senior" type="checkbox" [(ngModel)]="OnScreen.senior"> Senior
+        	</label>
+        	<label class="form-check-label">
+        		<input class="form-check-input" name="kid" type="checkbox" [(ngModel)]="OnScreen.kid"> Dziecko
+        	</label>
+			<!-- <b class="alert" *ngIf="!myForm.controls['senior'].valid && myForm.controls['kid'].touched"> Nie można zaznaczać opcji senior i dziecko jednocześnie </b> -->
+		</div>
+		<div class="form-check">
 			<p>Rodzaj bagażu</p>
             <label class="form-check-label">
                 <input class="form-check-input" type="radio" value="smal" [(ngModel)]="OnScreen.bagage">
