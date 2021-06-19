@@ -30,6 +30,7 @@ export class SummaryComponent implements OnInit {
     discountKid = this.OnScreen.kid = this.flightdetails.kid;
     discountSenior =this.OnScreen.senior = this.flightdetails.senior
     bagage = this.OnScreen.bagage = this.flightdetails.bagage;
+    this.countPrice(departurePlace, arrivalPlace, ticets, discountKid, discountSenior, bagage )
   }
 price;
 bagagePrice;
